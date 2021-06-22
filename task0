@@ -1,0 +1,18 @@
+import random
+
+rand_list=[random.randint(-100,100) for x in range(30)]
+print("Список рандомних чисел",rand_list)
+
+nomer = rand_list[0]
+pos = 0
+
+for x in range(1, len(rand_list)):
+ if rand_list[x] > nomer:
+  nomer = rand_list[x]
+  pos = x + 1
+print("Максимальний елемент:", nomer, "Порядковий номер:", pos)
+
+print("Пари від’ємних чисел, що стоять поруч:")
+for x in range(x):
+  if rand_list[x] < 0 and rand_list[x + 1] < 0:
+    print(rand_list[x], rand_list[x + 1])
